@@ -5,11 +5,12 @@ import Footer from './Components/Footer';
 import myImage from  "./myImage.png";
 import Child from './Components/Child';
 import Btn from './Components/btn';
+import Nav from './Components/Nav';
 import ModeToggler from './ModeToggler';
 
 
 function Logo(props){
-  const userPic  = <img src={myImage} />
+  const userPic  = <img src={myImage} width="300px" height="300px"/>
   return userPic;
 }
 const App = () => {
@@ -17,9 +18,10 @@ const App = () => {
   return (
     <div>
     <Header name="Khaled" color='Purple' />
+    <Nav/>
     <Btn/>
     <div>
-      <Child message={date.toLocaleTimeString()}/>
+      <Child style={Logo} message={date.toLocaleTimeString()}/>
     </div>
     <ModeToggler/>
     <Logo/>
